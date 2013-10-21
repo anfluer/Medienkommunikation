@@ -1,4 +1,4 @@
-package ab0104;
+package ab01.ex04;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

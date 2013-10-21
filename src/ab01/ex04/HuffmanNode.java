@@ -1,4 +1,4 @@
-package ab0104;
+package ab01.ex04;
 
 public class HuffmanNode {
 private String alphabetChar;
