@@ -13,7 +13,6 @@ public class AB01_Main {
 	}
 
 //	private static void runEx05() {
-//		// TODO Auto-generated method stub
 //	}
 
 	private static void runEx04() {

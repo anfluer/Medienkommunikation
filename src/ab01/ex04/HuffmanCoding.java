@@ -32,10 +32,8 @@ public class HuffmanCoding {
 				node = new HuffmanNode();
 			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return nodeList;
