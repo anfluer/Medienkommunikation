@@ -2,25 +2,23 @@ package ab01;
 
 import java.util.Comparator;
 
-public class HuffmanTree implements Comparator<HuffmanTree>, Comparable<HuffmanTree>{
+public class HuffmanTree implements Comparator<HuffmanTree>, Comparable<HuffmanTree> {
 	public String alphabetChar;
 	public float frequency;
-	public HuffmanTree one;
 	public HuffmanTree zero;
-
-	public HuffmanTree(String alphabetChar, float frequency, HuffmanTree one,
-			HuffmanTree zero) {
+	public HuffmanTree one;
+	public String code;
+	public float codeLength;
+	public float entropy;
+	public boolean isLeaf;
+		
+	public HuffmanTree(String alphabetChar, float frequency, HuffmanTree zero, HuffmanTree one, boolean isLeaf, float entropy) {
 		this.alphabetChar = alphabetChar;
 		this.frequency = frequency;
-		this.one = one;
 		this.zero = zero;
-	}
-
-	public boolean isLeaf() {
-		if (one == null && zero == null)
-			return true;
-		else
-			return false;
+		this.one = one;
+		this.isLeaf = isLeaf;
+		this.entropy = entropy;
 	}
 
 	@Override
@@ -33,7 +31,7 @@ public class HuffmanTree implements Comparator<HuffmanTree>, Comparable<HuffmanT
 	@Override
 	public boolean equals(Object obj) {
 		HuffmanTree o = (HuffmanTree) obj;
-		if (this.frequency == o.frequency ) return true;
+		if (this.frequency == o.frequency) return true;
 		else return false;
 	}
 
@@ -43,5 +41,4 @@ public class HuffmanTree implements Comparator<HuffmanTree>, Comparable<HuffmanT
 		if (this.frequency < o.frequency) return -1;
 		else return 1;
 	}
-	
 }
