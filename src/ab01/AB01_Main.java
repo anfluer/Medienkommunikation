@@ -11,11 +11,12 @@ public class AB01_Main {
 	public static int index = 1;
 
 	public static void main(String[] args) {
+//		ArrayList<HuffmanTree> leafs = initLeafsFromFile("src/ab01/alphabetEX03.csv");
 		ArrayList<HuffmanTree> leafs = initLeafsFromFile("src/ab01/alphabet.csv");
 		HuffmanTree tree = generateTree(leafs);
 
 		printCodeBook(tree, new StringBuffer()); //Ex04
-//		printMetaData(); //Ex05
+		printMetaData(); //Ex05
 	}
 	
 	@SuppressWarnings("resource")
@@ -75,6 +76,7 @@ public class AB01_Main {
 	private static void printCodeBook(HuffmanTree tree, StringBuffer code) {
 		if (tree.isLeaf) {
 			System.out.format("CodebookEntry %2d: ", index++);
+//			System.out.println("[" + tree.alphabetChar + "][" + code + "] h:" + tree.entropy);
 			System.out.println("[" + tree.alphabetChar + "][" + code + "]");
 			
 			tree.code = code.toString();
