@@ -1,0 +1,130 @@
+******************
+** Ex01:        **
+******************
+ a) Medium:
+    a.1) Perzeptionsmedium:
+         Zentrale Frage: Wie wird Information aufgenommen?
+         Menschlichen Sinne Optisch/Bild/Auge od. Akkustisch/Geräusch/Ohr 
+    
+    a.2) Repräsentationsmedium:
+         Zentrale Frage: Wie wird Information Repräsentiert (im Rechner kodiert)?
+         Text als ASCII 
+         
+    a.3) Präsentationsmedium:
+         Zentrale Frage: Wie wird Information ausgegeben?
+         Eingabe / Ausgabe
+         Text über ein Blatt Papier
+         Tastatur / Bildschirm
+         Mikro / Boxen
+    
+    a.4) Speichermedium:
+         Wie kann Information dauerhaft gespeichert werden?
+         Blatt Papier
+         Auf HDD mittels Textfile.
+    
+    a.5) Übertragungsmedium:
+         Wie wird Information von einem Medium auf ein anderes übertragen?
+         Blatt Papier
+         Luft bei Schall
+         Netzwerk
+    
+    
+b) Multimedia:
+   b.1) Diskretes Medium
+        Wenn der Inhalt die Information Zeitunabhängig ist.
+        Bild
+        Text
+   b.2) Kontinuierliches Medium:
+        Die Zeitliche Abfolge ist relevant:
+        Film
+        Musik
+        
+
+c) Medieninformatik:
+   Verarbeitung von multimedialen inhalten mittels Rechnern 
+
+
+Geringere Datenmengen!
+Aufnahme von information:
+ --Haptisch
+ --Optisch
+ --Akustisch
+ --Olfaktorisch
+
+
+******************
+** Ex02:        **
+******************
+Siehe AnalogDigital.png
+a) Digitales Signal
+   Verändert sich sprunghaft.
+
+b) Analoges Signal
+   Kontinuierliches Signal. Kann theoretisch eine unendlich genau sein. 
+
+
+Umwandlung Analog >> Digital:
+Siehe SamplingQuantisierung.png
+a) Abtastrate
+   Sampling: Frequenz der Abnahme eines analogen Signales. Siehe Sampling.png
+
+b) Quantisierung
+   Wert des Signales zum jeweiligen Abtast-Zeitpunkt.
+
+
+Nyquist-Shannon-Abtasttheorem
+Für verlustfreies Sampling muss die Samplingrate mindestens 2mal die maximale Frequenz des Signales aufweisen!
+fs > 2fm
+
+Vorteile/Nachteile Analog/Digital
+Digital: Komprimierbar, kleiner / verlust von Daten
+Analog: Gegenteil...
+
+
+******************
+** Ex03:        **
+******************
+a) Alphabet
+   Ein Alphabet ist die (endliche) Menge der einzelnen Zeichen aus denen sich eine Nachricht zusammensetzen kann.
+
+b) Nachricht
+   Aus dem Alphabet zusammengesetzte Zeichenfolge um Information zu übertragen.
+
+c) Nachrichtenquelle
+   Ist die Entität, welche die Nachricht aus den Zeichen des Alphabetes zusammenstellt.
+
+d) avg. Nachrichtenlänge
+   Mittlere Wortlänge?? Wieviele zeichen relativ zur deren auftrittswahrscheinlichkeit für die übermittlung einer Nachricht verwendet werden müssen:
+   avg.Length = sum(Länge des Codewortes * Wahrscheinlichkeit)
+
+e) Codierung
+   Umwandlung einer Nachricht von einem Alphabet in ein anderes.
+
+f) Entropie (H)
+   Informationsgehalt einer Nachricht. Errechnet sich aus H = -sum(pi * log2 pi)
+
+g) Redundanz (R)
+   Wieviele Zeichen durchschnittlich zuviel verwendet werden gegenüber einer optimalen Codierung des Zeichens. R = AVG.Length - Entropy
+
+h) Optimale Codierung
+   Minimale Redundanz.
+
+i) Fano-Bedingung
+   Damit wieder decodiert werden kann darf kein Wort gleich beginnen wie ein anderes. Jedes Codewort muss eindeutig sein:
+   [a][0]
+   [b][01]
+   [c][10]
+   Wiederspricht der Fano-Bedingung da die Nachricht [aba][0010] nicht dekodiert werden kann.
+
+
+Berechnungen:
+CodebookEntry  1: [b][00]  -- 0.3321928
+CodebookEntry  2: [e][010] -- 0.2160964
+CodebookEntry  3: [a][011] -- 0.46438563
+CodebookEntry  4: [d][10]  -- 0.5
+CodebookEntry  5: [c][11]  -- 0.5287712
+
+     		 Wert 		    	 Formel
+Entropy: 	 2.041446 Bits    	 -sum(pi * log2 pi)
+AVG Länge: 	 2.25 Bits   		 sum(Länge des Codewortes * Frequenz)
+Redundanz: 	 0.20855403 Bits 	 AVG Länge - Entropy
