@@ -7,6 +7,8 @@ public class HuffmanTree implements Comparator<HuffmanTree>, Comparable<HuffmanT
 	public float frequency;
 	public HuffmanTree zero;
 	public HuffmanTree one;
+	
+	
 	public String code;
 	public float codeLength;
 	public float entropy;
@@ -20,11 +22,11 @@ public class HuffmanTree implements Comparator<HuffmanTree>, Comparable<HuffmanT
 		this.isLeaf = isLeaf;
 		this.entropy = entropy;
 	}
-
+	
 	@Override
-	public int compare(HuffmanTree e1, HuffmanTree e2) {
-		if (e1.frequency == e2.frequency) return 0;
-		if (e1.frequency < e2.frequency) return -1;
+	public int compareTo(HuffmanTree o) {
+		if (this.frequency == o.frequency) return 0;
+		if (this.frequency < o.frequency) return -1;
 		else return 1;
 	}
 
@@ -36,9 +38,9 @@ public class HuffmanTree implements Comparator<HuffmanTree>, Comparable<HuffmanT
 	}
 
 	@Override
-	public int compareTo(HuffmanTree o) {
-		if (this.frequency == o.frequency) return 0;
-		if (this.frequency < o.frequency) return -1;
+	public int compare(HuffmanTree e1, HuffmanTree e2) {
+		if (e1.frequency == e2.frequency) return 0;
+		if (e1.frequency < e2.frequency) return -1;
 		else return 1;
 	}
 }

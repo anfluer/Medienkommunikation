@@ -57,10 +57,10 @@ Aufnahme von information:
 ******************
 Siehe AnalogDigital.png
 a) Digitales Signal
-   Verändert sich sprunghaft.
+   Verändert sich sprunghaft. Kann gespeichert werden.
 
 b) Analoges Signal
-   Kontinuierliches Signal. Kann theoretisch eine unendlich genau sein. 
+   Kontinuierliches Signal. Kann theoretisch eine unendlich genau sein, daher auch nicht nicht gespeichert werden... ~~~ 
 
 
 Umwandlung Analog >> Digital:
@@ -77,7 +77,7 @@ Für verlustfreies Sampling muss die Samplingrate mindestens 2mal die maximale Fr
 fs > 2fm
 
 Vorteile/Nachteile Analog/Digital
-Digital: Komprimierbar, kleiner / verlust von Daten
+Digital: Komprimierbar, kleiner / verlust von Daten, verstärken nicht fehlerfrei möglich
 Analog: Gegenteil...
 
 
@@ -118,11 +118,11 @@ i) Fano-Bedingung
 
 
 Berechnungen:
-CodebookEntry  1: [b][00]  -- 0.3321928
+CodebookEntry  1: [b][00]  -- 0.3321928 --00
 CodebookEntry  2: [e][010] -- 0.2160964
 CodebookEntry  3: [a][011] -- 0.46438563
-CodebookEntry  4: [d][10]  -- 0.5
-CodebookEntry  5: [c][11]  -- 0.5287712
+CodebookEntry  4: [d][10]  -- 0.5 -- 01
+CodebookEntry  5: [c][11]  -- 0.5287712 --1
 
      		 Wert 		    	 Formel
 Entropy: 	 2.041446 Bits    	 -sum(pi * log2 pi)
